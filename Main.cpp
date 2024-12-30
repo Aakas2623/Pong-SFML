@@ -4,7 +4,7 @@
 int main() {
     // Create our window manager instance
     Core::GameWindowManager gameWindowManager;
-    Event1::EventManager eventManager;
+    EventManager eventManager;
 
 
     // Initialize the window
