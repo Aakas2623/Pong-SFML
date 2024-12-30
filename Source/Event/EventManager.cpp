@@ -2,8 +2,9 @@
 #include <iostream>
 using namespace std;
 
-
-    bool EventManager::isKeyPressed(sf::Keyboard::Key key) 
+namespace Event
+{
+    bool EventManager::isKeyPressed(sf::Keyboard::Key key)
     {
         // Detect if a specific key is pressed
         return sf::Keyboard::isKeyPressed(key);
@@ -15,15 +16,15 @@ using namespace std;
         return (sf::Mouse::isButtonPressed(sf::Mouse::Left));
     }
 
-    void EventManager::pollEvents(RenderWindow* game_window) 
+    void EventManager::pollEvents(RenderWindow* game_window)
     {
         sf::Event event;
-        while (game_window->pollEvent(event)) 
+        while (game_window->pollEvent(event))
         {
             // Previous Code
 
             // Check for Escape key
-            if (isKeyPressed(sf::Keyboard::Escape)) 
+            if (isKeyPressed(sf::Keyboard::Escape))
             {
                 game_window->close();
             }
@@ -37,6 +38,7 @@ using namespace std;
             }
         }
     }
+}
 
     
 
