@@ -9,6 +9,10 @@ namespace Gameplay
     class Ball
     {
     private:
+
+        float ball_speed = .5f;
+        Vector2f velocity = Vector2f(ball_speed, ball_speed);
+
         Texture pong_ball_texture;
         Sprite pong_ball_sprite;
 
@@ -22,6 +26,8 @@ namespace Gameplay
 
         void loadTexture();
         void initializeVariables();
+
+        void move();
 
     public:
 
