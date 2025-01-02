@@ -24,8 +24,9 @@ namespace Core
 
     void GameLoop::render() {
         game_window_manager->clearGameWindow();
-        game_window_manager->displayGameWindow();
         gameplay_manager->render(game_window_manager->getGameWindow());
+        game_window_manager->displayGameWindow();
+        
     }
 
 }
