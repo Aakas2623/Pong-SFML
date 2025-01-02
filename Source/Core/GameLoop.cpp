@@ -19,8 +19,9 @@ namespace Core
         event_manager->pollEvents(game_window_manager->getGameWindow());
     }
 
-    void GameLoop::update() {
-
+    void GameLoop::update() 
+    {
+        gameplay_manager->update();
     }
 
     void GameLoop::render() {

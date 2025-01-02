@@ -4,18 +4,6 @@ using namespace std;
 
 namespace Event
 {
-    bool EventManager::isKeyPressed(sf::Keyboard::Key key)
-    {
-        // Detect if a specific key is pressed
-        return sf::Keyboard::isKeyPressed(key);
-    }
-
-    bool EventManager::isLeftMouseButtonClicked()
-    {
-        // Detect if the left mouse button is clicked
-        return (sf::Mouse::isButtonPressed(sf::Mouse::Left));
-    }
-
     void EventManager::pollEvents(RenderWindow* game_window)
     {
         sf::Event event;
@@ -38,6 +26,20 @@ namespace Event
             }
         }
     }
+
+    bool EventManager::isKeyPressed(sf::Keyboard::Key key)
+    {
+        // Detect if a specific key is pressed
+        return sf::Keyboard::isKeyPressed(key);
+    }
+
+    bool EventManager::isLeftMouseButtonClicked()
+    {
+        // Detect if the left mouse button is clicked
+        return (sf::Mouse::isButtonPressed(sf::Mouse::Left));
+    }
+
+    
 }
 
     
