@@ -4,8 +4,10 @@
 #include "../../Header/Core/GameWindowManager.h"
 #include "../../Header/Event/EventManager.h"
 #include "../../Header/Gameplay/Boundary/Boundary.h"
+#include"../../Header/Utility/TimeService.h"
 
 using namespace Event;
+using namespace Utility;
 
 
 namespace Gameplay
@@ -15,6 +17,7 @@ namespace Gameplay
 
 	private:
 		EventManager* event_manager;
+		TimeService* time_service;
 
 		float player1_position_x = 40.0f;
 		float player1_position_y = 300.0f;
