@@ -36,8 +36,10 @@ namespace Gameplay
 	public:
 		GameplayManager(EventManager* manager);
 
-		
 		void update();
 		void render(RenderWindow* game_window);
+
+		void UpdateScore();
+		void resetPlayers();
 	};
 }

@@ -29,10 +29,12 @@ namespace UI
         int player1_score = 0;
         int player2_score = 0;
 
+        void loadFontTexture();
+
     public:
         UIService();
 
-        void loadFontTexture();
+        
         void createLeftScoreText();
         void createRightScoreText();
 

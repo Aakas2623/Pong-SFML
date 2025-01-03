@@ -86,13 +86,16 @@ namespace Gameplay
     {
         FloatRect ball_bounds = pong_ball_sprite.getGlobalBounds();
 
+        // Check for out-of-bounds on the left or right boundary
         if (ball_bounds.left <= left_boundary)
         {
-            reset();        // Player 2 scores!
+            updateLeftCollisionState(true);
+            reset();
         }
         else if (ball_bounds.left + ball_bounds.width >= right_boundary)
         {
-            reset();        // Player 1 scores!
+            updateRightCollisionState(true);
+            reset();
         }
     }
 
@@ -116,5 +119,21 @@ namespace Gameplay
                 return;
             }
         }
+    }
+
+    bool Ball::isLeftCollisionOccurred() {
+        return had_left_collison;
+    }
+
+    void Ball::updateLeftCollisionState(bool value) {
+        had_left_collison = value;
+    }
+
+    bool Ball::isRightCollisionOccurred() {
+        return had_right_collison;
+    }
+
+    void Ball::updateRightCollisionState(bool value) {
+        had_right_collison = value;
     }
 }
