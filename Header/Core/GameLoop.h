@@ -5,12 +5,14 @@
 #include "../../Header/Gameplay/GameplayManager.h"
 #include "../../Header/Gameplay/Paddle/Paddle.h"
 #include "../../Header/Gameplay/Ball/Ball.h"
+#include "../../Header/Sound/SoundManager.h"
 
 using namespace sf;
 using namespace Core;
 using namespace Event;
 using namespace std;
 using namespace Gameplay;
+using namespace Sound;
 
 namespace Core
 {
@@ -20,6 +22,7 @@ namespace Core
 			GameWindowManager* game_window_manager;
 			EventManager* event_manager;
 			GameplayManager* gameplay_manager;
+			SoundManager* sound_manager;
 
 		public:
 			void initialize();

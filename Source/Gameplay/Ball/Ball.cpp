@@ -64,10 +64,14 @@ namespace Gameplay
         if (ball_bounds.intersects(player1_bounds) && velocity.x < 0)
         {
             velocity.x = -velocity.x;  // Bounce!
+
+            SoundManager::PlaySoundEffect(SoundType::BALL_BOUNCE);
         }
         if (ball_bounds.intersects(player2_bounds) && velocity.x > 0)
         {
             velocity.x = -velocity.x;  // Reverse horizontal direction
+
+            SoundManager::PlaySoundEffect(SoundType::BALL_BOUNCE);
         }
     }
 
@@ -79,6 +83,8 @@ namespace Gameplay
             (ball_bounds.top + ball_bounds.height >= bottom_boundary && velocity.y > 0))
         {
             velocity.y = -velocity.y;  // Reverse vertical direction
+
+            SoundManager::PlaySoundEffect(SoundType::BALL_BOUNCE);
         }
     }
 
