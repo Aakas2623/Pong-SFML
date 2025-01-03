@@ -32,5 +32,6 @@ namespace Gameplay
 		ball->render(game_window);
 		player1->render(game_window);
 		player2->render(game_window);
+		ui_service->render(game_window);
 	}
 }
